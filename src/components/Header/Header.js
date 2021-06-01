@@ -6,7 +6,7 @@ export default function Header() {
         <Base>
             <div className="grid-container">
                 <div className="grid-item">
-                    <h1>Book Store</h1>
+                    <h3>BOOK STORE</h3>
                 </div>
             </div>
         </Base>
