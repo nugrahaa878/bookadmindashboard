@@ -1,23 +1,26 @@
-import './App.css';
+import React, { Fragment } from 'react'
+import { Redirect, Route, Switch } from 'react-router'
+import { routes } from './routes'
 
-function App() {
+export default function App() {
+
+  const pages = routes.map((route, index) => {
+    return(
+      <Route
+        component={route.component}
+        exact={route.exact}
+        path={route.path}
+        key={index}
+      />
+    )
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Fragment>
+      <Switch>
+        {pages}
+        <Redirect to='/' />
+      </Switch>
+    </Fragment>
+  )
 }
-
-export default App;
