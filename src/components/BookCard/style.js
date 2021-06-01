@@ -6,6 +6,7 @@ const BookCardStyled = styled.div`
     padding: 25px 50px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 5px;
+    margin-bottom: 40px;
     p,
     h2 {
         margin: 0;

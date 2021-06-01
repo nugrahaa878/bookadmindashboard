@@ -12,6 +12,8 @@ export default function HomePage() {
                 <button>Add +</button>
             </div>
             <BookCard />
+            <BookCard />
+            <BookCard />
         </HomePageStyled>
     );
 }
