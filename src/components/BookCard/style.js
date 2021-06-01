@@ -3,13 +3,15 @@ import styled from "styled-components";
 const BookCardStyled = styled.div`
     background-color: #ffffff;
     width: fit-content;
-    padding: 10px 50px;
+    padding: 25px 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
     p,
     h1 {
         margin: 0;
     }
     .poster {
-        width: 140px;
+        width: 150px;
     }
     .grid-container {
         display: flex;
