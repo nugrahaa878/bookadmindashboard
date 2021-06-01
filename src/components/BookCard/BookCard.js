@@ -8,7 +8,7 @@ export default function BookCard() {
             <div className="grid-container">
                 <div className="left">
                     <div className="title-container">
-                        <h1>Fleishman Is in Trouble</h1>
+                        <h2>Fleishman Is in Trouble</h2>
                         <p>Book by Ari Angga Nugraha</p>
                     </div>
                     <div className="desc-container">

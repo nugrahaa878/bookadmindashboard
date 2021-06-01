@@ -7,7 +7,7 @@ const BookCardStyled = styled.div`
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 5px;
     p,
-    h1 {
+    h2 {
         margin: 0;
     }
     .poster {
@@ -36,6 +36,9 @@ const BookCardStyled = styled.div`
     }
     .left {
         margin-right: 200px;
+    }
+    .desc-left {
+        margin-right: 30px;
     }
     
 `;
