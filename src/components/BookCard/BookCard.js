@@ -35,7 +35,7 @@ export default function BookCard() {
                     </div>
                 </div>
                 <div className="right">
-                    <img src={poster} className="poster"/>
+                    <img src={poster} className="poster" alt="Poster Buku"/>
                 </div>
             </div>
         </BookCardStyled>
