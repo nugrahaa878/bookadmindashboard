@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const Base = styled.div`
     background-color: #FFFFFF;
     width: 100%;
-    margin-bottom: 50px;
     box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
     .grid-container {
         display: flex;

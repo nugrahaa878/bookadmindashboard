@@ -7,6 +7,10 @@ export default function HomePage() {
     return (
         <HomePageStyled>
             <Header />
+            <div className="container">
+                <p>Books (54)</p>
+                <button>Add +</button>
+            </div>
             <BookCard />
         </HomePageStyled>
     );
