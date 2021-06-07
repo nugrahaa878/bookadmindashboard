@@ -39,6 +39,7 @@ const HomePageStyled = styled.div`
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 10, 0, 0.4); /* Black w/ opacity */
     margin-bottom: 100px;
+    padding-top: 10px;
   }
   .submit-book {
     margin: 0;
