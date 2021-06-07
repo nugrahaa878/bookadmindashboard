@@ -35,12 +35,19 @@ class HomePage extends Component {
 
     return (
       <HomePageStyled>
-        <Header />
-        <div className="container">
-          <p>Books (54)</p>
-          <button>Add +</button>
+        <div className="content-container">
+          <Header />
+          <div className="container">
+            <p>Books (54)</p>
+            <button>Add +</button>
+          </div>
+          {bookCards}
         </div>
-        <SubmitBook></SubmitBook>        
+        <div className="modal">
+          <div className="model-content">
+            <SubmitBook className="submit-book"></SubmitBook>
+          </div>
+        </div>
       </HomePageStyled>
     );
   }
