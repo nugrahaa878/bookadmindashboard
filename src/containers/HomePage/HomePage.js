@@ -39,7 +39,7 @@ class HomePage extends Component {
 
     if (this.state.isOpen) {
       bookForm = (
-        <div className="modal" onClick={this.handleClose}>
+        <div className="modal">
           <div className="model-content">
             <SubmitBook
               className="submit-book"
