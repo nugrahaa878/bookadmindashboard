@@ -3,6 +3,16 @@ import close from "../../assets/close.png";
 import SubmitBookStyled from "./style";
 
 const SubmitBook = (props) => {
+  console.log(props.countries);
+  var countriesData = props.countries;
+  var listCountries = [];
+
+  countriesData.forEach((country, index) => {
+    listCountries.push(
+      <option value={country["name"]} key={index}>{country["name"]}</option>
+    );
+  });
+
   return (
     <SubmitBookStyled>
       <div className="container">
@@ -27,7 +37,9 @@ const SubmitBook = (props) => {
           <p>Number of Page</p>
           <input />
           <p>Country Publisher</p>
-          <input />
+          <select id="coutry" name="country">
+            {listCountries}
+          </select>
           <div className="footer-form">
             <div>
               <p>Error error</p>

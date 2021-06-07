@@ -45,7 +45,7 @@ const SubmitBookStyled = styled.div`
         font-weight: normal;
     }
 
-    .form-container input {
+    .form-container input, select {
         background-color: #ecf0f1;
         height: 30px;
         border: none;

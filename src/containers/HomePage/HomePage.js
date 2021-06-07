@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import BookCard from "../../components/BookCard/BookCard";
 import Header from "../../components/Header/Header";
-import { getAllBook } from "../../store/actions/books";
+import { getAllBook, getAllCountries } from "../../store/actions/books";
 import HomePageStyled from "./style";
 import SubmitBook from "../../components/SubmitBook/SubmitBook";
 
@@ -17,6 +17,7 @@ class HomePage extends Component {
 
   componentDidMount() {
     this.props.getAllBook();
+    this.props.getAllCountries();
   }
 
   handleOpen = () => {
@@ -44,6 +45,7 @@ class HomePage extends Component {
             <SubmitBook
               className="submit-book"
               handleClose={this.handleClose}
+              countries={this.props.countries}
             ></SubmitBook>
           </div>
         </div>
@@ -89,12 +91,14 @@ const mapStateToProps = (state) => {
   return {
     isLoading: state.listBookReducer.isLoading,
     listBook: state.listBookReducer.listBook,
+    countries: state.listBookReducer.countries
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getAllBook: () => dispatch(getAllBook()),
+    getAllCountries: () => dispatch(getAllCountries())
   };
 };
 
