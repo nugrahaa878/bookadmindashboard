@@ -4,6 +4,7 @@ import BookCard from "../../components/BookCard/BookCard";
 import Header from "../../components/Header/Header";
 import { getAllBook } from "../../store/actions/books";
 import HomePageStyled from "./style";
+import SubmitBook from "../../components/SubmitBook/SubmitBook";
 
 class HomePage extends Component {
   componentDidMount() {
@@ -39,7 +40,7 @@ class HomePage extends Component {
           <p>Books (54)</p>
           <button>Add +</button>
         </div>
-        {bookCards}
+        <SubmitBook></SubmitBook>        
       </HomePageStyled>
     );
   }

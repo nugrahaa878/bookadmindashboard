@@ -4,6 +4,7 @@ const HomePageStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
     .container {
         width: 100%;
         display: flex;
