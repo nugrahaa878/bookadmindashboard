@@ -1,4 +1,4 @@
-import { GET_BOOKS, GET_BOOKS_FAILED, GET_BOOKS_SUCCESS } from "./actionTypes"
+import { GET_BOOKS, GET_BOOKS_FAILED, GET_BOOKS_SUCCESS } from "../actions/actionTypes"
 import { updateObject } from '../utility'
 
 const initialState = {

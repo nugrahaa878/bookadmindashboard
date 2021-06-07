@@ -1,6 +1,6 @@
 import { connectRouter } from "connected-react-router";
 import { combineReducers } from "redux";
-import listBookReducer from "../store/actions/books";
+import listBookReducer from "../store/reducers/books";
 
 const createRootReducer = (history) => 
     combineReducers({
