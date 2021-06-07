@@ -1,6 +1,5 @@
 import React from "react";
 import BookCardStyled from "./style";
-import poster from '../../assets/poster.jpeg';
 
 const BookCard = (props) => {
     return (
