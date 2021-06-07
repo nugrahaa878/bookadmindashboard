@@ -7,18 +7,53 @@ import HomePageStyled from "./style";
 import SubmitBook from "../../components/SubmitBook/SubmitBook";
 
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isOpen: false,
+    };
+  }
+
   componentDidMount() {
     this.props.getAllBook();
   }
+
+  handleOpen = () => {
+    this.setState({
+      isOpen: true,
+    });
+  };
+
+  handleClose = () => {
+    this.setState({
+      isOpen: false,
+    });
+  };
 
   render() {
     var isLoading = this.props.isLoading;
     var listBook = this.props.listBook;
     var bookCards = [];
+    var bookForm = null;
+
+    if (this.state.isOpen) {
+      bookForm = (
+        <div className="modal" onClick={this.handleClose}>
+          <div className="model-content">
+            <SubmitBook
+              className="submit-book"
+              handleClose={this.handleClose}
+            ></SubmitBook>
+          </div>
+        </div>
+      );
+    } else {
+      bookForm = null;
+    }
 
     if (!isLoading && listBook) {
       for (let idx = 0; idx < listBook.length; idx++) {
-        console.log("Hey" + listBook[idx].title);
         bookCards.push(
           <BookCard
             title={listBook[idx].title}
@@ -28,6 +63,7 @@ class HomePage extends Component {
             publishedOn={listBook[idx].publishedOn}
             country={listBook[idx].country}
             imgUrl={listBook[idx].imageUrl}
+            key={listBook[idx].id}
           />
         );
       }
@@ -39,15 +75,11 @@ class HomePage extends Component {
           <Header />
           <div className="container">
             <p>Books (54)</p>
-            <button>Add +</button>
+            <button onClick={this.handleOpen}>Add +</button>
           </div>
           {bookCards}
         </div>
-        <div className="modal">
-          <div className="model-content">
-            <SubmitBook className="submit-book"></SubmitBook>
-          </div>
-        </div>
+        {bookForm}
       </HomePageStyled>
     );
   }
