@@ -23,6 +23,9 @@ const HomePageStyled = styled.div`
     color: white;
     font-weight: bold;
   }
+  button:hover {
+    background-color: #f1c40f;
+  }
   .container p {
     font-weight: bold;
   }

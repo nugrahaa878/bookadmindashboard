@@ -58,7 +58,9 @@ const SubmitBookStyled = styled.div`
     .footer-form {
         display: flex;
         justify-content: space-between;
-
+    }
+    .submit:hover {
+        background-color: #f1c40f;
     }
 `
 
