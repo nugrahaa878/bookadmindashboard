@@ -52,6 +52,9 @@ const HomePageStyled = styled.div`
     display: flex;
     justify-content: center;
   }
+  .wait {
+    font-size: 20px;
+  }
 `;
 
 export default HomePageStyled;

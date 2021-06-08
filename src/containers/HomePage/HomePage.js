@@ -37,6 +37,13 @@ class HomePage extends Component {
     var listBook = this.props.listBook;
     var bookCards = [];
     var bookForm = null;
+    var waiting;
+
+    if (this.props.isLoading) {
+      waiting = <p className="wait">Please Wait . . .</p>;
+    } else {
+      waiting = null;
+    }
 
     if (this.state.isOpen) {
       bookForm = (
@@ -79,6 +86,7 @@ class HomePage extends Component {
             <p>Books (54)</p>
             <button onClick={this.handleOpen}>Add +</button>
           </div>
+          {waiting}
           {bookCards}
         </div>
         {bookForm}
